@@ -1,0 +1,69 @@
+{
+  "name": "intentlens",
+  "displayName": "IntentLens",
+  "description": "Explain selected frontend code and diff impact in human terms.",
+  "version": "0.0.3",
+  "publisher": "intentlens",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "assets/intentlens_128.png",
+  "activationEvents": [
+    "onCommand:intentlens.explainSelection",
+    "onCommand:intentlens.explainDiff"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "intentlens.explainSelection",
+        "title": "IntentLens: Explain Selected Code"
+      },
+      {
+        "command": "intentlens.explainDiff",
+        "title": "IntentLens: Explain Diff Impact"
+      }
+    ],
+    "configuration": {
+      "title": "IntentLens",
+      "properties": {
+        "intentlens.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API key for your OpenAI-compatible endpoint."
+        },
+        "intentlens.baseUrl": {
+          "type": "string",
+          "default": "https://api.openai.com/v1",
+          "description": "Base URL for OpenAI-compatible API."
+        },
+        "intentlens.model": {
+          "type": "string",
+          "default": "gpt-4o-mini",
+          "description": "Model name."
+        },
+        "intentlens.beginnerMode": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use teaching-style explanations for selected code."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.5",
+    "eslint": "^8.57.0"
+  }
+}

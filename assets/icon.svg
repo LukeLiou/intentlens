@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="IntentLens icon">
+  <defs>
+    <linearGradient id="lensGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="256" height="256" rx="28" fill="#0f172a" />
+  <circle cx="112" cy="112" r="64" fill="url(#lensGrad)" opacity="0.9" />
+  <circle cx="112" cy="112" r="44" fill="#0f172a" />
+  <rect x="154" y="154" width="72" height="16" rx="8" fill="#38bdf8" transform="rotate(45 154 154)" />
+  <path d="M88 96h48M88 112h32M88 128h40" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round" />
+</svg>
