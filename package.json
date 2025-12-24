@@ -2,8 +2,12 @@
   "name": "intentlens",
   "displayName": "IntentLens",
   "description": "Explain selected frontend code and diff impact in human terms.",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "publisher": "intentlens",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LukeLiou/intentlens.git"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -20,13 +24,27 @@
     "commands": [
       {
         "command": "intentlens.explainSelection",
-        "title": "IntentLens: Explain Selected Code"
+        "title": "IntentLens: Explain Selected Code（解释选中代码）"
       },
       {
         "command": "intentlens.explainDiff",
-        "title": "IntentLens: Explain Diff Impact"
+        "title": "IntentLens: Explain Diff Impact（解释 Diff 影响）"
       }
     ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "intentlens.explainSelection",
+          "when": "editorHasSelection",
+          "group": "navigation@intentlens"
+        },
+        {
+          "command": "intentlens.explainDiff",
+          "when": "editorTextFocus",
+          "group": "navigation@intentlens"
+        }
+      ]
+    },
     "configuration": {
       "title": "IntentLens",
       "properties": {
@@ -58,6 +76,7 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "package": "vsce package",
+    "package:skip-secrets": "vsce package --allow-package-all-secrets --allow-package-env-file",
     "publish": "vsce publish"
   },
   "devDependencies": {
