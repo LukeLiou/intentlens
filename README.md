@@ -3,7 +3,7 @@
 中文 | [English](#english)
 
 ## 中文
-IntentLens 是一款 VS Code 扩展，用更易懂的方式解释前端代码与 diff，适合读遗留代码、做代码评审与新成员上手。
+IntentLens 是一款 VS Code 扩展，用更易懂的方式解释开发代码与 diff，适合读遗留代码、做代码评审与新成员上手。
 
 <p align="center">
   <img src="https://mall-sld-test.oss-cn-beijing.aliyuncs.com/lib/intentlens/assets/intentlens_menu.png" alt="IntentLens 命令截图" width="520" />
